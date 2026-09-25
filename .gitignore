@@ -1,0 +1,41 @@
+# ---- dependencies ----
+node_modules/
+.npm/
+.pnpm-store/
+
+# ---- builds ----
+dist/
+build/
+out/
+.vite/
+*.tsbuildinfo
+
+# ---- secrets (keep only the example) ----
+.env
+.env.*
+!.env.example
+
+# ---- local database (created by the server on first start) ----
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# ---- tests & coverage ----
+coverage/
+
+# ---- logs ----
+*.log
+npm-debug.log*
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ---- editors ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~

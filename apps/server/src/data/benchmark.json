@@ -1,0 +1,9 @@
+{
+  "model": "typesafe-ai/jev",
+  "modelVersion": "jev-1.13.0",
+  "averageCostUsd": 2.1e-05,
+  "averageInputTokens": 488,
+  "sampleSize": 10,
+  "measuredAt": "2026-09-25T06:43:38.113Z",
+  "source": "request log (costCredits)"
+}

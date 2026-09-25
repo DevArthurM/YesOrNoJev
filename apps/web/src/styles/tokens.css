@@ -1,0 +1,87 @@
+/*
+ * Design tokens, lifted from impossibl.com/design:
+ * "black, mono, lowercase, sharp. ascii is the voice, dither is the data."
+ * One brand color (white on black). Error and success are text-only accents.
+ */
+
+:root,
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --surface-raised: #0a0a0a;
+  --watermark: #161616;
+  --divider: #1a1a1a;
+  --border: #262626;
+  --scrollbar: #2a2a2a;
+  --border-hover: #3a3a3a;
+  --text-dim: #5a5a5a;
+  --text-muted: #777777;
+  --ascii: #787878;
+  --text-secondary: #aaaaaa;
+  --fg: #ffffff;
+  --fg-inverse: #000000;
+
+  --error: #ff6b6b;
+  --success: #3ccf6a;
+
+  --bot-body: #777777;
+  --bot-eyes: #ffffff;
+
+  --overlay: rgb(0 0 0 / 0.72);
+  color-scheme: dark;
+}
+
+/* Light mode is a deliberate mirror of the gray ramp, not an auto-invert. */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --surface-raised: #f7f7f7;
+  --watermark: #f0f0f0;
+  --divider: #ececec;
+  --border: #e0e0e0;
+  --scrollbar: #d6d6d6;
+  --border-hover: #bdbdbd;
+  --text-dim: #9a9a9a;
+  --text-muted: #6e6e6e;
+  --ascii: #8a8a8a;
+  --text-secondary: #444444;
+  --fg: #000000;
+  --fg-inverse: #ffffff;
+
+  --error: #d93636;
+  --success: #0a7d28;
+
+  --bot-body: #8a8a8a;
+  --bot-eyes: #000000;
+
+  --overlay: rgb(255 255 255 / 0.78);
+  color-scheme: light;
+}
+
+:root {
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  /* impossibl uses RT Alias Rough Light for figures; Inter Tight Light is the open stand-in. */
+  --font-display: "rtAliasRoughLight", "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+
+  --text-body: 14px;
+  --text-title: 15px;
+  --text-control: 11px;
+  --text-label: 11px;
+  --tracking-label: 0.08em;
+
+  --control-height: 32px;
+  --input-height: 44px;
+  --radius: 0;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* "speed is a brand value. responsive fast, ambient slow" */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-press: 120ms;
+  --dur-reveal: 200ms;
+  --dur-draw: 400ms;
+}

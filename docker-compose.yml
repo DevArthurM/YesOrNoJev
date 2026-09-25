@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    image: yesornojev
+    ports:
+      - "${PORT:-3000}:3000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      PORT: 3000
+    volumes:
+      # Datasets and results survive rebuilds and restarts.
+      - yesornojev-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  yesornojev-data:

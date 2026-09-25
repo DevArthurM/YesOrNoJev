@@ -1,0 +1,36 @@
+{
+  "name": "yesornojev",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Ask a yes/no question about every row of a CSV and watch impossibl JEVs answer it live.",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c gray,white \"npm run dev -w @yesornojev/server\" \"npm run dev -w @yesornojev/web\"",
+    "build": "npm run build -w @yesornojev/web && npm run build -w @yesornojev/server",
+    "start": "npm run start -w @yesornojev/server",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "benchmark": "npm run benchmark -w @yesornojev/server"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.11.0",
+    "globals": "^17.12.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.70.1",
+    "vitest": "^5.0.1"
+  },
+  "allowScripts": {
+    "esbuild@0.27.7": true,
+    "esbuild@0.28.2": true
+  }
+}
